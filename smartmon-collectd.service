@@ -1,6 +1,6 @@
 [Unit]
 Description=Collector for SMART values
-After=syslog.target
+After=syslog.target collectd.service
 
 [Service]
 EnvironmentFile=-/etc/sysconfig/smartmon-collectd
