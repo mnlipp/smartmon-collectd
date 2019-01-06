@@ -1,0 +1,12 @@
+[Unit]
+Description=Collector for SMART values
+After=syslog.target
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/smartmon-collectd
+ExecStart=/opt/smartmon-collectd.sh sda sdb sdc sdd
+Restart=always
+StandardOutput=syslog
+
+[Install]
+WantedBy=multi-user.target
